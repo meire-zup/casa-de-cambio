@@ -8,9 +8,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws  Exception{
 
-        System.out.println("Converter moeda: ");
+        System.out.println("Converter moeda: "); // Dólar americano --> USD
         String code = new Scanner(System.in).nextLine();
-        System.out.println("Para moeda: ");
+        System.out.println("Para moeda: "); // Para real brasileiro --> BRL Obs: Abaixo tem a lista com as moedas
         String codein = new Scanner(System.in).nextLine();
         Moeda moeda = MoedaService.buscaMoeda(code, codein);
         System.out.println("Valor a ser convertido:");
