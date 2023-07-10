@@ -12,6 +12,7 @@ import java.net.URL;
 
 public class MoedaService {
 
+
     static String webService = "https://economia.awesomeapi.com.br/json/last/";
     static int codigoSucesso = 200;
 
@@ -38,7 +39,7 @@ public class MoedaService {
             JsonObject jsonObject = gson.fromJson(jsonString, JsonObject.class);
 
             // parâmetro recebe a conversão que se  deseja realizar
-            JsonObject usdbrObject = jsonObject.getAsJsonObject("USDEUR");
+            JsonObject usdbrObject = jsonObject.getAsJsonObject(code + codein);
             Moeda moeda = gson.fromJson(usdbrObject, Moeda.class);
 
             return moeda;
